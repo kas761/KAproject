@@ -44,5 +44,9 @@ def read_file(data_file):
     log(f"The number of lines in the file is: {line_count} and number of characters is: {char_count}")
     log(f"Task finished at {datetime.datetime.now()}")
 
-retrieve_data(data_file,url)
-read_file(data_file)
+def main():
+    retrieve_data(data_file,url)
+    read_file(data_file)
+
+if __name__ == '__main__':
+    main()
