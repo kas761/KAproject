@@ -144,3 +144,16 @@ Task finished at 2025-02-10 10:45:38.881439
 Task started at 2025-02-10 10:45:52.981194
 Error: The file data/asda.txt does not exist.
 
+Task started at 2025-02-10 10:52:06.613891
+Added 0 new lines and 100 repeats occurred
+The number of lines in the file is: 401 and number of characters is: 16164
+Task finished at 2025-02-10 10:52:06.911576
+Task started at 2025-02-10 10:52:13.374152
+Added 0 new lines and 500 repeats occurred
+The number of lines in the file is: 2001 and number of characters is: 81264
+Task finished at 2025-02-10 10:52:13.459723
+Task started at 2025-02-10 10:52:16.156024
+Task started at 2025-02-10 10:52:28.997225
+Task started at 2025-02-10 10:53:10.276243
+Task started at 2025-02-10 10:53:21.428345
+Task started at 2025-02-10 10:53:25.801558
