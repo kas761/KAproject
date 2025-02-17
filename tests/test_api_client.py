@@ -1,13 +1,17 @@
 import pytest
 import requests
-from main.py import url, data_types
-
+import sys
+sys.path.insert(1, '/home/karci/KAproject/')
+from main import url_base, data_types
 
 @pytest.fixture
 def get_response():
     responses = []
     for data_type in data_types:
-        responses.append(requests.get(url))
+        url = f"{url_base}{data_type}"
+        response = requests.get(url)
+        print(response)
+        responses.append(response)
     return responses
 
 def test_get_response_status_code(get_response):

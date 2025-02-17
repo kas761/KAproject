@@ -1,55 +1,18 @@
+The number of lines in the file is: 3 and number of characters is: 17
+Task finished at 2025-02-17 23:34:24.103242
+Task started at 2025-02-17 23:34:24.116899
+Added 1 new lines and 0 repeats occurred
+Task started at 2025-02-17 23:36:30.587166
+Added 1 new lines and 0 repeats occurred
+Task started at 2025-02-17 23:36:45.995591
+Added 1 new lines and 0 repeats occurred
 Processing posts data
-Task started at 2025-02-17 19:16:41.699654
-Added 100 new lines and 0 repeats occurred
-The number of lines in the file is: 101 and number of characters is: 25218
-Task finished at 2025-02-17 19:16:41.790114
-Processing posts data
-Task started at 2025-02-17 19:17:44.236486
+Task started at 2025-02-17 23:36:57.844462
 Added 0 new lines and 100 repeats occurred
 The number of lines in the file is: 101 and number of characters is: 25218
-Task finished at 2025-02-17 19:17:44.329412
-Processing albums data
-Task started at 2025-02-17 19:17:55.291005
-Added 100 new lines and 0 repeats occurred
-The number of lines in the file is: 101 and number of characters is: 7431
-Task finished at 2025-02-17 19:17:55.376054
-Processing albums data
-Task started at 2025-02-17 19:17:57.096833
-Added 0 new lines and 100 repeats occurred
-The number of lines in the file is: 101 and number of characters is: 7431
-Task finished at 2025-02-17 19:17:57.236724
-Processing comments data
-Task started at 2025-02-17 19:18:04.772411
-Added 500 new lines and 0 repeats occurred
-The number of lines in the file is: 501 and number of characters is: 144243
-Task finished at 2025-02-17 19:18:04.860084
-Processing comments data
-Task started at 2025-02-17 19:18:11.959828
-Added 0 new lines and 500 repeats occurred
-The number of lines in the file is: 501 and number of characters is: 144243
-Task finished at 2025-02-17 19:18:12.068805
-Processing comments data
-Task started at 2025-02-17 19:18:14.851673
-Added 0 new lines and 500 repeats occurred
-The number of lines in the file is: 501 and number of characters is: 144243
-Task finished at 2025-02-17 19:18:14.978561
-Processing photos data
-Task started at 2025-02-17 19:18:21.656678
-Added 5000 new lines and 0 repeats occurred
-The number of lines in the file is: 5001 and number of characters is: 936470
-Task finished at 2025-02-17 19:18:21.772967
+Task finished at 2025-02-17 23:36:57.915767
 Processing posts data
-Task started at 2025-02-17 19:18:28.511598
+Task started at 2025-02-17 23:37:09.588533
 Added 0 new lines and 100 repeats occurred
 The number of lines in the file is: 101 and number of characters is: 25218
-Task finished at 2025-02-17 19:18:28.590968
-Processing todos data
-Task started at 2025-02-17 19:18:42.084202
-Added 200 new lines and 0 repeats occurred
-The number of lines in the file is: 201 and number of characters is: 19709
-Task finished at 2025-02-17 19:18:42.181874
-Processing users data
-Task started at 2025-02-17 19:18:48.629756
-Added 10 new lines and 0 repeats occurred
-The number of lines in the file is: 11 and number of characters is: 4413
-Task finished at 2025-02-17 19:18:48.719796
+Task finished at 2025-02-17 23:37:09.659155

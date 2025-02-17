@@ -3,12 +3,13 @@ from logger import Logger
 from data_retrieval import DataRetrieval
 from data_processor import DataProcessor
 
+data_types = ["posts", "comments", "albums", "photos", "todos", "users"]
+url_base = "https://jsonplaceholder.typicode.com/"
+log_file = "process_log.txt"
+
 def main(args):
-    logger = Logger()
-    data_types = ["posts", "comments", "albums", "photos", "todos", "users"]
-    data_file = f"data/{data_type}.txt"
-    url = f"https://jsonplaceholder.typicode.com/{data_type}"
-    
+    logger = Logger(log_file)
+
     if args.data_type:
         data_type = args.data_type.strip().lower()
     else:
@@ -21,7 +22,9 @@ def main(args):
                 break
             else:
                 logger.log(f"Invalid {data_type} data type. Please enter a valid data type.")
-    
+
+    url = f"{url_base}/{data_type}"
+    data_file = f"data/{data_type}.txt"
     logger.log(f"Processing {data_type} data")
     processor = DataProcessor(data_file, logger)
     retriever = DataRetrieval(data_file, data_type, url, processor, logger)
