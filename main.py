@@ -3,23 +3,37 @@ from logger import Logger
 from data_retrieval import DataRetrieval
 from data_processor import DataProcessor
 
-def main():
-    data_types = ["posts", "comments", "albums", "photos", "todos", "users"]
-    while True:
-        data_type = input("Enter the data type - posts, comments, albums, photos, todos, users: ").strip().lower()
-        if data_type == 'esc':
-            print("Exiting the program.")
-            break
-        elif data_type in data_types:
-            data_file = f"data/{data_type}.txt"
-            url = f"https://jsonplaceholder.typicode.com/{data_type}"
-            logger = Logger()
-            processor = DataProcessor(data_file, logger)
-            retriever = DataRetrieval(data_file, url, processor, logger)
-            retriever.retrieve_data()
-            processor.read_file()
-        else:
-            print("Invalid data type. Please enter a valid data type.")
+data_types = ["posts", "comments", "albums", "photos", "todos", "users"]
+url_base = "https://jsonplaceholder.typicode.com/"
+log_file = "process_log.txt"
+
+def main(args):
+    logger = Logger(log_file)
+
+    if args.data_type:
+        data_type = args.data_type.strip().lower()
+    else:
+        while True:
+            data_type = input("Enter the data type - posts, comments, albums, photos, todos, users (esc to exit): ").strip().lower()
+            if data_type == 'esc':
+                print("Exiting the program.")
+                return
+            if data_type in data_types:
+                break
+            else:
+                logger.log(f"Invalid {data_type} data type. Please enter a valid data type.")
+
+    url = f"{url_base}/{data_type}"
+    data_file = f"data/{data_type}.txt"
+    logger.log(f"Processing {data_type} data")
+    processor = DataProcessor(data_file, logger)
+    retriever = DataRetrieval(data_file, data_type, url, processor, logger)
+    content, retrieved_data = retriever.retrieve_data()
+    retriever.write_data(content, retrieved_data)
+    processor.read_file()
 
 if __name__ == '__main__':
-    main()
+    parser = argparse.ArgumentParser(description="Process some data types.")
+    parser.add_argument('--data_type', type=str, help='The type of data to process (posts, comments, albums, photos, todos, users)')
+    args = parser.parse_args()
+    main(args)
