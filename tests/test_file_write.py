@@ -5,6 +5,8 @@ from logger import Logger
 from data_processor import DataProcessor
 from data_retrieval import DataRetrieval
 
+##
+
 @pytest.fixture
 def logger():
     return Logger("process_log.txt")
