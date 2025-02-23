@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import argparse
 from logger import Logger
 from data_retrieval import DataRetrieval
@@ -37,3 +38,18 @@ if __name__ == '__main__':
     parser.add_argument('--data_type', type=str, help='The type of data to process (posts, comments, albums, photos, todos, users)')
     args = parser.parse_args()
     main(args)
+=======
+import click
+from main import main
+
+@click.command()
+@click.option('--url_base', default='https://jsonplaceholder.typicode.com/', help='Base URL for the API')
+@click.option('--data_type', type=click.Choice(['posts', 'comments', 'albums', 'photos', 'todos', 'users']), help='The type of data to process')
+
+def cli(url_base, data_type):
+    args = {'url_base': url_base, 'data_type': data_type}
+    main(args)
+
+if __name__ == '__main__':
+    cli()
+>>>>>>> origin/main
