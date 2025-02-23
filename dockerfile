@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM python:3.9-slim
+FROM python:3.12-slim
 
 # Set the working directory in the container
 WORKDIR /app
@@ -17,7 +17,7 @@ RUN poetry install --no-root
 EXPOSE 80
 
 # Define environment variable
-ENV NAME World
+ENV NAME KARC
 
 # Run the CLI when the container launches
 CMD ["poetry", "run", "python", "app.py"]

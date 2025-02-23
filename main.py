@@ -34,6 +34,6 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Process some data types.")
-    parser.add_argument('--data_type', type=str, help='The type of data to process (posts, comments, albums, photos, todos, users)')
+    parser.add_argument('data_type', type=str, help='The type of data to process (posts, comments, albums, photos, todos, users)')
     args = parser.parse_args()
     main(args)
