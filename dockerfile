@@ -17,11 +17,8 @@ RUN poetry install --no-root
 EXPOSE 80
 
 # Define environment variable
-<<<<<<< HEAD
 ENV NAME KARC
-=======
-ENV NAME World
->>>>>>> origin/main
+
 
 # Run the CLI when the container launches
 CMD ["poetry", "run", "python", "app.py"]
