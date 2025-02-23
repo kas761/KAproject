@@ -3,12 +3,12 @@ name: CI
 on:
   push:
     branches:
-    #  - main
-      - feature/CI_update
+    #- main
+    - feature/CI_update
   pull_request:
     branches:
-    #  - main
-      - feature/CI_update
+    #- main
+    - feature/CI_update
 
 jobs:
   build:
@@ -26,7 +26,10 @@ jobs:
     - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pytest
+        pip install pytest requests
+
+    - name: Set PYTHONPATH
+      run: echo "PYTHONPATH=$PYTHONPATH:$(pwd)" >> $GITHUB_ENV
 
     - name: Set up Node.js
       uses: actions/setup-node@v2
