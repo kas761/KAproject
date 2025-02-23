@@ -25,7 +25,7 @@ jobs:
       run: npm install
 
     - name: Run tests
-      run: npm test
+      run: pytest
 
     - name: Build Docker image
       run: docker build -t my-app:latest .
