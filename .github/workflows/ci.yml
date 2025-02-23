@@ -3,10 +3,12 @@ name: CI
 on:
   push:
     branches:
-      - main
+    #  - main
+    - CI_update
   pull_request:
     branches:
-      - main
+    #  - main
+    - CI_update
 
 jobs:
   build:
