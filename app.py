@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import argparse
 from logger import Logger
 from data_retrieval import DataRetrieval
@@ -38,7 +37,7 @@ if __name__ == '__main__':
     parser.add_argument('--data_type', type=str, help='The type of data to process (posts, comments, albums, photos, todos, users)')
     args = parser.parse_args()
     main(args)
-=======
+
 import click
 from main import main
 
@@ -52,4 +51,3 @@ def cli(url_base, data_type):
 
 if __name__ == '__main__':
     cli()
->>>>>>> origin/main

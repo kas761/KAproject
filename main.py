@@ -1,39 +1,50 @@
+"""
+This script processes data types from a given URL and writes the data to a file.
+It supports data types such as posts, comments, albums, photos, todos, and users.
+"""
+
 import argparse
 from logger import Logger
 from data_retrieval import DataRetrieval
 from data_processor import DataProcessor
 
 data_types = ["posts", "comments", "albums", "photos", "todos", "users"]
-url_base = "https://jsonplaceholder.typicode.com/"
-log_file = "process_log.txt"
+URL_BASE = "https://jsonplaceholder.typicode.com"
+LOG_FILE = "process_log.txt"
 
-def main(args):
-    logger = Logger(log_file)
 
-    if args.data_type:
-        data_type = args.data_type.strip().lower()
+def main(arguments):
+    """
+    Main function to process data types from a given URL and write the data to a file.
+
+    Args:
+        arguments (argparse.Namespace): Command-line arguments containing the data type to process.
+    """
+    logger = Logger(LOG_FILE)
+
+    if arguments.data_type:
+        data_type = arguments.data_type.strip().lower()
     else:
         while True:
-            data_type = input("Enter the data type - posts, comments, albums, photos, todos, users (esc to exit): ").strip().lower()
+            data_type = input(f"Enter data type - {data_types} (esc to exit): ").strip().lower()
             if data_type == 'esc':
                 print("Exiting the program.")
                 return
             if data_type in data_types:
                 break
-            else:
-                logger.log(f"Invalid {data_type} data type. Please enter a valid data type.")
+            logger.log(f"Invalid {data_type} data type. Please enter a valid data type.")
 
-    url = f"{url_base}/{data_type}"
+    url = f"{URL_BASE}/{data_type}"
     data_file = f"data/{data_type}.txt"
     logger.log(f"Processing {data_type} data")
     processor = DataProcessor(data_file, logger)
-    retriever = DataRetrieval(data_file, data_type, url, processor, logger)
+    retriever = DataRetrieval(data_file, data_type, url, logger, processor)
     content, retrieved_data = retriever.retrieve_data()
     retriever.write_data(content, retrieved_data)
     processor.read_file()
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Process some data types.")
-    parser.add_argument('data_type', type=str, help='The type of data to process (posts, comments, albums, photos, todos, users)')
+    parser.add_argument('data_type', type=str, nargs='?', help=f"Data types - {data_types}.")
     args = parser.parse_args()
     main(args)

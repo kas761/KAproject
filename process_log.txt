@@ -1,43 +1,5 @@
-The number of lines in the file is: 3 and number of characters is: 17
-Task finished at 2025-02-17 23:34:24.103242
-Task started at 2025-02-17 23:34:24.116899
-Added 1 new lines and 0 repeats occurred
-Task started at 2025-02-17 23:36:30.587166
-Added 1 new lines and 0 repeats occurred
-Task started at 2025-02-17 23:36:45.995591
-Added 1 new lines and 0 repeats occurred
-Processing posts data
-Task started at 2025-02-17 23:36:57.844462
-Added 0 new lines and 100 repeats occurred
-The number of lines in the file is: 101 and number of characters is: 25218
-Task finished at 2025-02-17 23:36:57.915767
-Processing posts data
-Task started at 2025-02-17 23:37:09.588533
-Added 0 new lines and 100 repeats occurred
-The number of lines in the file is: 101 and number of characters is: 25218
-Task finished at 2025-02-17 23:37:09.659155
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-Task started at 2025-02-23 13:35:41.926720
-Added 1 new lines and 0 repeats occurred
-Task started at 2025-02-23 14:30:47.039405
-Added 1 new lines and 0 repeats occurred
->>>>>>> Stashed changes
-=======
-Task started at 2025-02-23 13:35:41.926720
-Added 1 new lines and 0 repeats occurred
->>>>>>> origin/main
-Task started at 2025-02-23 14:55:45.450396
-Added 1 new lines and 0 repeats occurred
-Processing posts data
-Task started at 2025-02-23 15:08:37.265353
-Added 0 new lines and 100 repeats occurred
-The number of lines in the file is: 101 and number of characters is: 25218
-Task finished at 2025-02-23 15:08:37.639768
-Invalid psots data type. Please enter a valid data type.
-Processing posts data
-Task started at 2025-02-23 15:10:02.985432
-Added 0 new lines and 100 repeats occurred
-The number of lines in the file is: 101 and number of characters is: 25218
-Task finished at 2025-02-23 15:10:03.071941
+2025-02-23 20:29:53 | Processing posts data
+2025-02-23 20:29:53 | Task started.
+2025-02-23 20:29:53 | Added 0 new lines and 100 repeats occurred
+2025-02-23 20:29:53 | No of lines 101 and characters 25218 in the file
+2025-02-23 20:29:53 | Task finished. File read completed.
