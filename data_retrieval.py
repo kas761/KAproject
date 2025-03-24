@@ -1,5 +1,5 @@
-import requests
 import os
+import requests
 
 class DataRetrieval:
     def __init__(self, data_file, data_type, url, logger, processor):
@@ -10,37 +10,25 @@ class DataRetrieval:
         self.processor = processor
 
     def retrieve_data(self):
-        self.logger.log("Task started.")
+        if os.path.exists(self.data_file):
+            with open(self.data_file, 'r') as file:
+                content = file.read()
+        else:
+            self.logger.log(f"File {self.data_file} does not exist. Proceeding with empty content.")
+            content = ""
+
         try:
             response = requests.get(self.url)
             response.raise_for_status()
-            retrieved_data = response.json()
-
-            if not isinstance(retrieved_data, list):
-                verror = "Invalid data format: Expected a list"
-                self.logger.log(f"{verror}")
-                raise ValueError(f"{verror}")
-
-            if not os.path.exists(self.data_file):
-                self.logger.log(f"File {self.data_file} does not exist. Proceeding with empty content.")
-                content = ""
-            else:
-                with open(self.data_file, "r", encoding='utf-8') as file_read:
-                    content = file_read.read()
-                
+            data = response.json()
         except requests.exceptions.RequestException as e:
             self.logger.log(f"HTTP request failed: {e}")
-            content = ""
-            retrieved_data = []
+            return content, []
         except ValueError as e:
             self.logger.log(f"Data validation error: {e}")
-            content = ""
-            retrieved_data = []
-        except Exception as e:
-            self.logger.log(f"An unexpected error occurred: {e}")
-            content = ""
-            retrieved_data = []
-        return content, retrieved_data
+            return content, []
+
+        return content, data
                        
     def write_data(self, content, retrieved_data):
         if content is None or retrieved_data is None:
