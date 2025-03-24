@@ -1,8 +1,3 @@
-"""
-This script processes data types from a given URL and writes the data to a file.
-It supports data types such as posts, comments, albums, photos, todos, and users.
-"""
-
 import argparse
 from logger import Logger
 from data_retrieval import DataRetrieval
@@ -14,12 +9,6 @@ LOG_FILE = "process_log.txt"
 
 
 def main(arguments):
-    """
-    Main function to process data types from a given URL and write the data to a file.
-
-    Args:
-        arguments (argparse.Namespace): Command-line arguments containing the data type to process.
-    """
     logger = Logger(LOG_FILE)
 
     if arguments.data_type:

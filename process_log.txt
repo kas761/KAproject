@@ -3,3 +3,16 @@
 2025-02-23 20:29:53 | Added 0 new lines and 100 repeats occurred
 2025-02-23 20:29:53 | No of lines 101 and characters 25218 in the file
 2025-02-23 20:29:53 | Task finished. File read completed.
+2025-03-24 10:03:17 | Processing posts data
+2025-03-24 10:03:17 | Task started.
+2025-03-24 10:03:17 | Added 0 new lines and 100 repeats occurred
+2025-03-24 10:03:17 | No of lines 101 and characters 25218 in the file
+2025-03-24 10:03:17 | Task finished. File read completed.
+2025-03-24 10:03:51 | Invalid post data type. Please enter a valid data type.
+2025-03-24 10:03:54 | Processing posts data
+2025-03-24 10:15:23 | Processing posts data
+2025-03-24 10:15:23 | Task started.
+2025-03-24 10:15:23 | An unexpected error occurred: name 'os' is not defined
+2025-03-24 10:15:23 | Added 0 new lines and 0 repeats occurred
+2025-03-24 10:15:23 | No of lines 101 and characters 25218 in the file
+2025-03-24 10:15:23 | Task finished. File read completed.
