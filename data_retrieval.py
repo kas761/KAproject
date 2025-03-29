@@ -10,6 +10,7 @@ class DataRetrieval:
         self.processor = processor
 
     def retrieve_data(self):
+        self.logger.log("Task started.")
         if os.path.exists(self.data_file):
             with open(self.data_file, 'r') as file:
                 content = file.read()
