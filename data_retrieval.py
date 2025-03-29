@@ -6,7 +6,7 @@ class DataRetrieval:
         self.data_file = data_file
         self.data_type = data_type
         self.url = url
-        self.logger = logger
+        self.logger = logger  # Make sure logger is passed correctly here
         self.processor = processor
 
     def retrieve_data(self):
@@ -29,7 +29,7 @@ class DataRetrieval:
             return content, []
 
         return content, data
-                       
+
     def write_data(self, content, retrieved_data):
         if content is None or retrieved_data is None:
             self.logger.log("No data to write due to previous errors")

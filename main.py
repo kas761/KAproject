@@ -8,20 +8,21 @@ URL_BASE = "https://jsonplaceholder.typicode.com"
 LOG_FILE = "process_log.txt"
 
 
-def main(arguments):
+def main(args):
     logger = Logger(LOG_FILE)
 
-    if arguments.data_type:
-        data_type = arguments.data_type.strip().lower()
+    if args.data_type:
+        data_type = args.data_type.strip().lower()
     else:
         while True:
-            data_type = input(f"Enter data type - {data_types} (esc to exit): ").strip().lower()
+            data_type = input("Enter the data type - posts, comments, albums, photos, todos, users (esc to exit): ").strip().lower()
             if data_type == 'esc':
                 print("Exiting the program.")
                 return
             if data_type in data_types:
                 break
-            logger.log(f"Invalid {data_type} data type. Please enter a valid data type.")
+            else:
+                logger.log(f"Invalid {data_type} data type. Please enter a valid data type.")
 
     url = f"{URL_BASE}/{data_type}"
     data_file = f"data/{data_type}.txt"
